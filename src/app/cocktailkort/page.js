@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getCocktails } from "@/lib/api";
+import Cocktail from "../components/cocktail";
 
-export default function Home() {
+export default function Cocktailkort() {
   const [cocktails, setCocktails] = useState([]);
 
   useEffect(() => {
@@ -15,5 +16,21 @@ export default function Home() {
     fetchData();
   }, []);
 
-  return <div></div>;
+  return (
+    <main>
+      <section>
+        <div className="content py-20">
+          <div className="mb-20 max-w-prose">
+            <h1 className="text-7xl">Husets favoritter</h1>
+            <h2>Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti </h2>
+          </div>
+          <ul className="flex flex-col gap-20 md:grid grid-cols-3">
+            {cocktails.map((cocktail, index) => (
+              <Cocktail key={index} cocktail={cocktail} />
+            ))}
+          </ul>
+        </div>
+      </section>
+    </main>
+  );
 }

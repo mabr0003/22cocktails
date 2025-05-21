@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f6ef;
+  --secondbg: #f8f8f8;
+  --text: #383838;
+  --action: #0f350c;
+
+  --prime: #ffb249;
+  --layout-grid: [full-start] 1fr [content] minmax(0, 1200px) 1fr [full-end];
+  --mobile-grid: 1fr;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: var(--mobile-grid);
+}
+
+@media (width > 767px) {
+  main {
+    grid-template-columns: var(--layout-grid);
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: var(--layout-grid);
+  }
+  footer {
+    display: grid;
+    grid-template-columns: var(--layout-grid);
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (width > 767px) {
+  section {
+    grid-column: full;
+  }
+
+  .content {
+    grid-column: content;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h1,
+h3,
+ul {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+p,
+h2,
+span {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.amatic {
+  font-family: "Amatic SC", sans-serif;
+}
+
+.herotext {
+  display: none;
+}
+
+@media (width > 1130px) {
+  .herotext {
+    display: block;
+  }
+}
+
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 1rem;
+}
+
+.scroll-snap-align-center {
+  scroll-snap-align: center;
+}
+
+.clip-diagonal-left {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.clip-diagonal-right {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
