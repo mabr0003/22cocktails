@@ -4,8 +4,6 @@ import Review from "./review";
 
 const ScrollBox = () => {
   const scrollRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemWidth, setItemWidth] = useState(0);
 
   const scrollToIndex = (index) => {
     const item = scrollRef.current?.children[0]?.children[index];
