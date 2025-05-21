@@ -28,15 +28,6 @@ const ScrollBox = () => {
     });
   };
 
-  // Optional: Recalculate on resize to adapt to different screen sizes
-  useEffect(() => {
-    const handleResize = () => {
-      scrollToIndex(currentIndex);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [currentIndex]);
-
   return (
     <section className="py-20">
       <div ref={scrollRef} className="col-start-2 col-end-4 overflow-x-hidden md:overflow-x-auto py-10 scrollbar-thin">
