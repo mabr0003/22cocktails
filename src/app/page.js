@@ -32,7 +32,7 @@ export default function Home() {
       <ScrollBox />
       <section>
         <div className="content border-t py-20">
-          <div className="mb-20">
+          <div className="mb-24">
             <h1 className="text-7xl md:text-9xl">
               Lav dit eget<br></br>cocktailkort
             </h1>
