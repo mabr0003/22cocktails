@@ -38,22 +38,24 @@ export default function Home() {
         <div className="content border-t py-20">
           <div className="mb-24">
             <h1 className="text-7xl md:text-9xl">
-              Lav dit eget<br></br>cocktailkort
+              Lav dit eget<br></br>cocktailkort.
             </h1>
-            <p className="max-w-prose">Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Clacss aptent taciti </p>
+            <p className="max-w-prose">Vælg den løsning, der passer til dit event – du bestemmer selv, hvor mange cocktails der skal på menuen, og priserne afhænger af antallet af gæster.</p>
           </div>
           <div className="flex flex-col gap-14 md:grid grid-cols-3 mb-20">
-            <PakkeCard pakke={"On the rocks"} />
-            <PakkeCard pakke={"Neat"} />
+            <PakkeCard pakke={"On the rocks"} amount={"6"} price1={"10.000"} price2={"15.000"} price3={"20.000"} />
+            <PakkeCard pakke={"Neat"} amount={"9"} price1={"12.000"} price2={"17.000"} price3={"22.000"} />
             <div className="md:relative">
               <div className="md:absolute z-10">
-                <PakkeCard pakke={"The full pour"} />
+                <PakkeCard pakke={"The full pour"} amount={"12"} price1={"15.000"} price2={"20.000"} price3={"25.000"} />
               </div>
               <img className="hidden md:block absolute left-9 -top-96" width={300} src="/images/drinkdummy.png" />
             </div>
           </div>
           <div className="mt-6 md:mt-0">
-            <h2 className="max-w-prose mb-4">Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti </h2>
+            <h2 className="max-w-prose mb-4">
+              Lad os forvandle din fest til en oplevelse. Fra elegante cocktails til skarpe shakes – vi medbringer baren, stemningen og de dygtige bartendere. <br></br> Du skal bare samle gæsterne – vi sørger for resten.
+            </h2>
             <div>
               <ArrowBtn />
             </div>
@@ -64,15 +66,15 @@ export default function Home() {
         <img className="col-start-1 col-end-4 h-[90vh] w-full object-cover row-start-1" src="/images/dummy.png" />
         <div className="content row-start-1 text-7xl md:text-9xl self-center">
           <h1>
-            Vi har<br></br>ingredienserne<br></br>til en fantastisk<br></br>aften
+            Vi har<br></br>ingredienserne<br></br>til en fantastisk<br></br>aften.
           </h1>
         </div>
       </section>
       <section className="bg-[var(--prime)] pb-40 md:pb-0 pt-20">
         <div className="content">
           <div className="mb-10 md:justify-self-end max-w-prose">
-            <h2>Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc </h2>
-            <h1 className="text-7xl md:text-9xl">Lad os snakke sammen</h1>
+            <h2>Få et uforpligtende tilbud.</h2>
+            <h1 className="text-7xl md:text-9xl">Lad os snakke sammen.</h1>
           </div>
         </div>
       </section>

@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3>Kontaktinfo</h3>
           <div className="flex flex-col text-sm">
-            <a href="tel:#">+45 88 88 88 88</a>
-            <a href="mailto:#">@eksempel@eksmepel.com</a>
+            <a href="tel:#">+45 42 57 11 11</a>
+            <a href="mailto:#">kontakt@22cocktails.dk</a>
           </div>
         </div>
         <div className="text-center md:text-left">
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="content">
-        <p className="text-xs font-extralight pt-2">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet lobortis.</p>
+        <p className="text-xs font-extralight pt-2">©2025 Grønberg Consulting | Alle rettigheder forbeholdes</p>
       </div>
     </footer>
   );
