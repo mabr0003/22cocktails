@@ -21,13 +21,13 @@ const Header = () => {
 
         <nav className="hidden md:block">
           <ul className="flex gap-6 text-2xl">
-            <li>
+            <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/cocktailkort">Cocktailkort</a>
             </li>
-            <li>
+            <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/about">Om</a>
             </li>
-            <li>
+            <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/blog">Blog</a>
             </li>
           </ul>
