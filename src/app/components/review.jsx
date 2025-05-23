@@ -22,7 +22,7 @@ const Review = () => {
           </div>
           <div className="py-6 px-3 flex flex-col gap-2 max-w-96">
             <h2>{review.header}</h2>
-            <p>{`"${review.text}"`}</p>
+            <p className="font-extralight italic">{`"${review.text}"`}</p>
           </div>
         </li>
       ))}

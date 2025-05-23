@@ -1,29 +1,27 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Review from "./review";
 
 const ScrollBox = () => {
   const scrollRef = useRef(null);
+  const currentIndexRef = useRef(0);
 
   const scrollToIndex = (index) => {
     const item = scrollRef.current?.children[0]?.children[index];
     item?.scrollIntoView({ behavior: "smooth", inline: "center" });
+    currentIndexRef.current = index;
   };
 
   const scrollLeft = () => {
-    setCurrentIndex((prev) => {
-      const next = Math.max(prev - 1, 0);
-      scrollToIndex(next);
-      return next;
-    });
+    const prev = currentIndexRef.current;
+    const next = Math.max(prev - 1, 0);
+    scrollToIndex(next);
   };
 
   const scrollRight = () => {
-    setCurrentIndex((prev) => {
-      const next = prev + 1;
-      scrollToIndex(next);
-      return next;
-    });
+    const prev = currentIndexRef.current;
+    const next = prev + 1;
+    scrollToIndex(next);
   };
 
   return (

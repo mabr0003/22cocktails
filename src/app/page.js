@@ -11,18 +11,22 @@ export default function Home() {
       <section>
         <div className="content grid border-b py-20">
           <div className="justify-self-start row-start-1 col-start-1 z-10 self-start">
-            <HeroHeader />
+            <HeroHeader text={"Vibes"} />
           </div>
           <div className="justify-self-start ml-16 mt-24 row-start-1 col-start-1 z-10 self-start">
-            <HeroHeader />
+            <HeroHeader text={"Quality"} />
           </div>
-          <h2 className="herotext max-w-prose justify-self-end row-start-1 col-start-1 z-10 mt-20">Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti </h2>
+          <h2 className="herotext max-w-prose justify-self-end row-start-1 col-start-1 z-10 mt-12">
+            22 Cocktails skaber stemning med håndlavede cocktails af høj kvalitet. Vi stiller baren op til din fest og serverer smagfulde drinks med eksklusive råvarer. <br></br> <br></br> Du tager kun stilling til hvor vi skal stå - så klarer vi resten.
+          </h2>
           <img src="/images/herodummy.png" className="w-full h-96 object-cover row-start-1 col-start-1 mt-40" />
           <div className="justify-self-end mr-4 -mt-9 row-start-2 col-start-1 z-10 self-start">
-            <HeroHeader />
+            <HeroHeader text={"Taste"} />
           </div>
           <div className="mt-6 md:mt-0">
-            <h2 className="max-w-prose mb-4">Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti </h2>
+            <h2 className="max-w-prose mb-4">
+              Om det er fødselsdag, bryllup eller firmafest – vi skaber cocktailstemning, der løfter enhver anledning.<br></br>Vi stiller med bar og bartendere – du nyder festen.
+            </h2>
             <div>
               <ArrowBtn />
             </div>
@@ -39,11 +43,11 @@ export default function Home() {
             <p className="max-w-prose">Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Clacss aptent taciti </p>
           </div>
           <div className="flex flex-col gap-14 md:grid grid-cols-3 mb-20">
-            <PakkeCard />
-            <PakkeCard />
+            <PakkeCard pakke={"On the rocks"} />
+            <PakkeCard pakke={"Neat"} />
             <div className="md:relative">
               <div className="md:absolute z-10">
-                <PakkeCard />
+                <PakkeCard pakke={"The full pour"} />
               </div>
               <img className="hidden md:block absolute left-9 -top-96" width={300} src="/images/drinkdummy.png" />
             </div>

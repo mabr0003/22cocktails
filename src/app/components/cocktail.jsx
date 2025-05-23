@@ -19,7 +19,7 @@ const Cocktail = ({ index, cocktail }) => {
   };
 
   return (
-    <motion.li className="relative grid group cursor-pointer" onClick={handleClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
+    <motion.li className="relative grid group cursor-pointer shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" onClick={handleClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
       {/* Header */}
       <div
         className={`absolute z-10 text-5xl bg-[var(--prime)] px-6 py-1 -top-7 left-2 transition-transform duration-150

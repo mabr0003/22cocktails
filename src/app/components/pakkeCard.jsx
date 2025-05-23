@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-const PakkeCard = () => {
+const PakkeCard = ({ pakke }) => {
   return (
     <motion.div className="relative shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
       <div className="absolute z-10 text-5xl bg-[var(--prime)] px-6 py-1 -top-7 left-2">
-        <h3>Mojito</h3>
+        <h3>{pakke}</h3>
       </div>
 
       <img src="/images/herodummy.png" />
