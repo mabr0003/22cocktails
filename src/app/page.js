@@ -16,8 +16,8 @@ export default function Home() {
           <div className="justify-self-start ml-16 mt-24 row-start-1 col-start-1 z-10 self-start">
             <HeroHeader text={"Quality"} />
           </div>
-          <h2 className="herotext max-w-prose justify-self-end row-start-1 col-start-1 z-10 mt-12">
-            22 Cocktails skaber stemning med håndlavede cocktails af høj kvalitet. Vi stiller baren op til din fest og serverer smagfulde drinks med eksklusive råvarer. <br></br> <br></br> Du tager kun stilling til hvor vi skal stå - så klarer vi resten.
+          <h2 className="herotext max-w-prose justify-self-end row-start-1 col-start-1 z-10 mt-16">
+            22 Cocktails skaber stemning med håndlavede cocktails af høj kvalitet. Vi stiller baren op til din fest og serverer smagfulde drinks med eksklusive råvarer. <br></br>Du tager kun stilling til hvor vi skal stå - så klarer vi resten.
           </h2>
           <div className="w-full h-96 object-cover row-start-1 col-start-1 mt-40 overflow-hidden">
             <video src="https://pureweb.dk/videos/1920colour.mp4" autoPlay loop muted />
@@ -66,8 +66,9 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <img className="col-start-1 col-end-4 h-[90vh] w-full object-cover row-start-1" src="/images/dummy.png" />
-        <div className="content row-start-1 text-7xl md:text-9xl self-center">
+        <img className="col-start-1 col-end-4 h-[90vh] w-full object-cover row-start-1" src="/images/mojitobg.avif" />
+        <div className="col-start-1 col-end-4 row-start-1 h-[90vh] bg-black opacity-25"></div>
+        <div className="content row-start-1 text-7xl md:text-9xl self-center text-white z-10">
           <h1>
             Vi har<br></br>ingredienserne<br></br>til en fantastisk<br></br>aften.
           </h1>

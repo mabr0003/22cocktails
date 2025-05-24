@@ -26,11 +26,11 @@ const Cocktail = ({ index, cocktail }) => {
           ${isMobile && clicked ? "-rotate-12" : ""}
           md:group-hover:-rotate-12`}
       >
-        <h3>{cocktail.name}</h3>
+        <h3 className="text-4xl">{cocktail.name}</h3>
       </div>
 
       {/* Image */}
-      <img className="row-start-1 col-start-1 w-full" src={cocktail.image} alt={cocktail.name} />
+      <img className="row-start-1 col-start-1 w-full" src={`/images/${cocktail.image}.avif`} alt={cocktail.name} />
 
       {/* Overlay */}
       <div
@@ -41,7 +41,7 @@ const Cocktail = ({ index, cocktail }) => {
 
       {/* Ingredients List */}
       <ul
-        className={`pl-4 row-start-1 col-start-1 self-center text-2xl text-white z-10 transition-opacity duration-150
+        className={`pl-4 row-start-1 col-start-1 self-end pb-1 text-lg text-white z-10 transition-opacity duration-150
           ${isMobile && clicked ? "opacity-100" : "opacity-0"}
           md:group-hover:opacity-100`}
       >
