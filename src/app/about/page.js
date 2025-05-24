@@ -3,7 +3,7 @@ export default function About() {
     <main>
       <section>
         <div className="content">
-          <img src="/images/herodummy.png" className="w-full h-96 mt-20 object-cover" />
+          <img src="/images/bramble.avif" className="w-full h-96 mt-20 object-cover" />
         </div>
       </section>
       <section>
