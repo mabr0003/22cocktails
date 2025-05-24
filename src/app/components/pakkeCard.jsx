@@ -8,7 +8,7 @@ const PakkeCard = ({ pakke, amount, price1, price2, price3 }) => {
         <h3>{pakke}</h3>
       </div>
 
-      <img src="/images/setup.avif" />
+      <img src="/images/setup.avif" alt="bar" />
       <div className="bg-[var(--secondbg)] px-3 py-6 flex flex-col gap-4">
         <h3 className="text-3xl">{amount} cocktails</h3>
         <div className="flex justify-between">

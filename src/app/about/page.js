@@ -3,7 +3,7 @@ export default function About() {
     <main>
       <section>
         <div className="content">
-          <img src="/images/bramble.avif" className="w-full h-96 mt-20 object-cover" />
+          <img src="/images/bramble.avif" className="w-full h-96 mt-20 object-cover" alt="bramble" />
         </div>
       </section>
       <section>
@@ -14,7 +14,7 @@ export default function About() {
               Hos 22 Cocktails brænder vi for at levere smagfulde oplevelser – én cocktail ad gangen. Vi er specialister i cocktail catering og skaber unikke barløsninger til events, fester og firmaarrangementer over hele landet. Vores passion er at kombinere kvalitet, kreativitet og god service. Derfor arbejder vi kun med de bedste ingredienser, professionelle bartendere og en skræddersyet tilgang til hvert eneste event. Uanset om du drømmer om klassiske cocktails med et twist eller moderne signaturdrinks, sørger vi for at sætte prikken over i’et til din fest. Bag 22 Cocktails står et engageret team med mange års erfaring i både bar- og eventbranchen. Vi tror på, at en god cocktail ikke bare smager godt – den skaber stemning, samler mennesker og gør aftenen mindeværdig. Vil du give dine
               gæster en oplevelse ud over det sædvanlige? Så lad 22 Cocktails tage hånd om baren.
             </p>
-            <img className="justify-self-center -rotate-45" width={250} src="/images/drinkdummy.png" />
+            <img className="justify-self-center -rotate-45" width={250} src="/images/drinkdummy.png" alt="drink" />
           </div>
           <div className="md:grid grid-cols-[1fr_2fr] gap-6">
             <div>
@@ -24,7 +24,7 @@ export default function About() {
                 håndværket, smag for detaljer og ambitionen om at skabe noget, gæsterne husker.
               </p>
             </div>
-            <img className="justify-self-center rotate-45 -order-1" width={250} src="/images/drinkdummy.png" />
+            <img className="justify-self-center rotate-45 -order-1" width={250} src="/images/drinkdummy.png" alt="drink" />
           </div>
         </div>
       </section>

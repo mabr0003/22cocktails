@@ -52,7 +52,7 @@ export default function Home() {
               <div className="md:absolute z-10">
                 <PakkeCard pakke={"The full pour"} amount={"12"} price1={"15.000"} price2={"20.000"} price3={"25.000"} />
               </div>
-              <img className="hidden md:block absolute left-9 -top-96" width={300} src="/images/drinkdummy.png" />
+              <img className="hidden md:block absolute left-9 -top-96" width={300} src="/images/drinkdummy.png" alt="drink" />
             </div>
           </div>
           <div className="mt-6 md:mt-0">
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <img className="col-start-1 col-end-4 h-[90vh] w-full object-cover row-start-1" src="/images/mojitobg.avif" />
+        <img className="col-start-1 col-end-4 h-[90vh] w-full object-cover row-start-1" src="/images/mojitobg.avif" alt="mojito" />
         <div className="col-start-1 col-end-4 row-start-1 h-[90vh] bg-black opacity-25"></div>
         <div className="content row-start-1 text-7xl md:text-9xl self-center text-white z-10">
           <h1>
