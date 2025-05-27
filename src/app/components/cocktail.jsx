@@ -6,7 +6,6 @@ const Cocktail = ({ index, cocktail }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  // Detect screen width on mount + resize
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
