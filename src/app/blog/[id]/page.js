@@ -9,7 +9,7 @@ export default function SinglePostPage({ params }) {
   const post = posts.find((p) => p.id === id);
 
   if (!post) {
-    return <p>Post not found</p>;
+    return <p>Blog ikke fundet</p>;
   }
 
   return (

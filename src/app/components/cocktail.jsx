@@ -19,7 +19,6 @@ const Cocktail = ({ index, cocktail }) => {
 
   return (
     <motion.li className="relative grid group cursor-pointer shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" onClick={handleClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
-      {/* Header */}
       <div
         className={`absolute z-10 text-5xl bg-[var(--prime)] px-6 py-1 -top-7 left-2 transition-transform duration-150
           ${isMobile && clicked ? "-rotate-12" : ""}
@@ -28,17 +27,14 @@ const Cocktail = ({ index, cocktail }) => {
         <h3 className="text-4xl">{cocktail.name}</h3>
       </div>
 
-      {/* Image */}
       <img className="row-start-1 col-start-1 w-full" src={`/images/${cocktail.image}.avif`} alt={cocktail.name} />
 
-      {/* Overlay */}
       <div
         className={`row-start-1 col-start-1 bg-[#0F350C] transition-opacity duration-150
           ${isMobile && clicked ? "opacity-60" : "opacity-0"}
           md:group-hover:opacity-60`}
       ></div>
 
-      {/* Ingredients List */}
       <ul
         className={`pl-4 row-start-1 col-start-1 self-end pb-1 text-lg text-white z-10 transition-opacity duration-150
           ${isMobile && clicked ? "opacity-100" : "opacity-0"}
