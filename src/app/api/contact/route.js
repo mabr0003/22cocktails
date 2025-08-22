@@ -18,9 +18,9 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: email,
-      to: "mpobrum@hotmail.com",
-      subject: `New Contact Form Submission: ${subject}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+      to: "info@22cocktails.dk",
+      subject: `Ny besked fra website: `,
+      text: `Navn: ${name}\nEmail: ${email}\nBesked:\n${message}\nTelefon: ${subject}`,
     });
 
     return new Response(JSON.stringify({ message: "Email sent successfully" }), { status: 200 });

@@ -16,13 +16,13 @@ const Footer = () => {
             <a href="mailto:#">kontakt@22cocktails.dk</a>
           </div>
         </div>
-        <div className="text-center md:text-left">
+        {/* <div className="text-center md:text-left">
           <h3>Links</h3>
           <div className="flex flex-col text-sm">
             <a href="#">Instagram</a>
             <a href="#">TikTok</a>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="content">
         <p className="text-xs font-extralight pt-2">©2025 Grønberg Consulting | Alle rettigheder forbeholdes</p>

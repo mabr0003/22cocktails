@@ -1,21 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
-import { getCocktails } from "@/lib/api";
+
 import Cocktail from "../components/cocktail";
+import { cocktails } from "../data/cocktails";
 
 export default function Cocktailkort() {
-  const [cocktails, setCocktails] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const cocktailData = await getCocktails();
-      setCocktails(cocktailData);
-      console.log("cocktails:", cocktails);
-    }
-
-    fetchData();
-  }, []);
-
   return (
     <main>
       <section>
