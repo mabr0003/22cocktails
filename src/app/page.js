@@ -45,15 +45,19 @@ export default function Home() {
             </h1>
             <p className="amatic text-2xl font-bold max-w-prose">Vælg den løsning, der passer til dit event – du bestemmer selv, hvor mange cocktails der skal på menuen, og priserne afhænger af antallet af gæster.</p>
           </div>
-          <div className="flex flex-col gap-14 md:grid grid-cols-3 mb-20">
-            <PakkeCard pakke={"On the rocks"} amount={"6"} />
+          <div className="flex flex-col gap-14 md:gap-4 md:grid grid-cols-4 mb-20">
+            <img src="/images/mojito.avif" />
+            <img src="/images/paloma.avif" />
+            <img src="/images/darknstormy.avif" />
+            <img src="/images/espressomartini.avif" />
+            {/* <PakkeCard pakke={"On the rocks"} amount={"6"} />
             <PakkeCard pakke={"Neat"} amount={"9"} />
             <div className="md:relative">
               <div className="md:absolute z-10">
                 <PakkeCard pakke={"The full pour"} amount={"12"} />
               </div>
               <img className="hidden md:block absolute left-9 -top-96" width={300} src="/images/drinkdummy.png" alt="drink" />
-            </div>
+            </div> */}
           </div>
           <div className="mt-6 md:mt-0">
             <h2 className="amatic text-2xl font-bold max-w-prose mb-4">
