@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <header className="px-4 relative z-60 text-[#0D3A26]">
       <div className="content flex items-center justify-between border-b" style={{ borderColor: "var(--text)" }}>
-        <a className="-mb-2" href="/">
-          <img src="/images/22cocktailslogo.png" alt="22Cocktails logo" width={180} />
+        <a href="/">
+          <img src="/images/logo_green.png" alt="22Cocktails logo" width={120} />
         </a>
 
         {!menuOpen && (
@@ -27,9 +27,9 @@ const Header = () => {
             <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/cocktailkort">Cocktailkort</a>
             </li>
-            <li className="md:hover:text-gray-700 transition-all duration-150">
+            {/* <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/about">Om</a>
-            </li>
+            </li> */}
             {/* <li className="md:hover:text-gray-700 transition-all duration-150">
               <a href="/blog">Blog</a>
             </li> */}
@@ -52,16 +52,16 @@ const Header = () => {
                 Cocktailkort
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/about" onClick={() => setMenuOpen(false)}>
                 Om
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="/blog" onClick={() => setMenuOpen(false)}>
                 Blog
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
