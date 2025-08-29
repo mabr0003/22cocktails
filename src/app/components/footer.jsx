@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3>Åbningstider</h3>
           <div className="flex flex-col text-sm">
-            <span>Man-fre: 09-17</span>
-            <span>Weekend & Helligdage: Lukket</span>
+            <span>Alle dage: 09-17</span>
+      
           </div>
         </div>
         <div className="text-center md:text-left">
