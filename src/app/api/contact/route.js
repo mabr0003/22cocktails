@@ -2,11 +2,17 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, phone, message, date, people } = await req.json();
 
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !phone) {
       return new Response(JSON.stringify({ message: "All fields are required" }), { status: 400 });
     }
+
+    let emailText = `Navn: ${name}\nEmail: ${email}\nTelefon: ${phone}\n`;
+
+    if (people) emailText += `Antal gæster: ${people}\n`;
+    if (date) emailText += `Dato: ${date}\n`;
+    if (message) emailText += `Besked:\n${message}\n`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -20,7 +26,7 @@ export async function POST(req) {
       from: email,
       to: "info@22cocktails.dk",
       subject: `Ny besked fra website: `,
-      text: `Navn: ${name}\nEmail: ${email}\nBesked:\n${message}\nTelefon: ${subject}`,
+      text: emailText,
     });
 
     return new Response(JSON.stringify({ message: "Email sent successfully" }), { status: 200 });

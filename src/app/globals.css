@@ -2,11 +2,13 @@
 
 :root {
   --background: #fdf5e5;
-  --secondbg: #f8f8f8;
+  --secondbg: #f1f8e9;
   --text: #383838;
-  --action: #013927;
+  --prime: #ff6f61;
+  --secondary: #1b5e20;
+  --third: #c5e1a5;
+  --action: #ffb74d;
 
-  --prime: #fe8d83;
   --layout-grid: [full-start] 1fr [content] minmax(0, 1200px) 1fr [full-end];
   --mobile-grid: 1fr;
 }
@@ -78,6 +80,7 @@ p,
 h2,
 span {
   font-family: "Libre Franklin", sans-serif;
+  color: var(--text);
 }
 
 .amatic {
@@ -109,4 +112,22 @@ span {
 
 .clip-diagonal-right {
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+form {
+  background-color: var(--secondbg);
+  padding: 2rem;
+  box-shadow: -2px 21px 23px 12px rgba(0, 0, 0, 0.1);
+
+  > div {
+    label {
+      font-family: "Libre Franklin", sans-serif;
+      padding: 0.5rem;
+    }
+    input {
+      box-shadow: -2px 21px 23px 12px rgba(0, 0, 0, 0.1);
+      background-color: var(--secondbg);
+      padding: 0.5rem;
+    }
+  }
 }

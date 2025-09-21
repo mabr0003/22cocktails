@@ -6,14 +6,13 @@ const Footer = () => {
           <h3>Åbningstider</h3>
           <div className="flex flex-col text-sm">
             <span>Alle dage: 09-17</span>
-      
           </div>
         </div>
         <div className="text-center md:text-left">
           <h3>Kontaktinfo</h3>
           <div className="flex flex-col text-sm">
             <a href="tel:#">+45 42 57 11 11</a>
-            <a href="mailto:#">kontakt@22cocktails.dk</a>
+            <a href="mailto:#">info@22cocktails.dk</a>
           </div>
         </div>
         {/* <div className="text-center md:text-left">

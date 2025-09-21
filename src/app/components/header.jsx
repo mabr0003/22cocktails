@@ -10,7 +10,7 @@ const Header = () => {
     <header className="px-4 relative z-60 text-[#0D3A26]">
       <div className="content flex items-center justify-between border-b" style={{ borderColor: "var(--text)" }}>
         <a href="/">
-          <img src="/images/logo_green.png" alt="22Cocktails logo" width={120} />
+          <img src="/images/logo-coral.png" alt="22Cocktails logo" width={150} />
         </a>
 
         {!menuOpen && (

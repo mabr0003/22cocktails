@@ -4,8 +4,10 @@ const ContactFormular = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
     message: "",
+    people: "",
+    date: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -27,8 +29,8 @@ const ContactFormular = () => {
     });
 
     if (response.ok) {
-      setStatus("Din email er sendt afsted - vi vender tilbage hurtigst muligt!");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setStatus("Din besked er sendt afsted - vi vender tilbage hurtigst muligt!");
+      setFormData({ name: "", email: "", phone: "", people: "", date: "", message: "" });
     } else {
       setStatus("Der opstod en fejl - prøv igen");
     }
@@ -36,18 +38,33 @@ const ContactFormular = () => {
     setLoading(false);
   };
   return (
-    <div className="bg-second py-6 rounded-lg">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-6 gap-x-20 md:grid grid-cols-4">
-        <input type="text" name="name" placeholder="Navn" value={formData.name} onChange={handleChange} required className="p-2 col-start-1 col-span-2 row-start-1 rounded bg-[var(--secondbg)] shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" />
-        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required className="p-2 col-start-1 col-span-2 row-start-2 rounded bg-[var(--secondbg)] shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" />
-        <input type="tel" name="subject" placeholder="Telefon" value={formData.subject} onChange={handleChange} required className="p-2 col-start-1 col-span-2 row-start-3 rounded bg-[var(--secondbg)] shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]" />
-        <textarea name="message" placeholder="Din besked..." value={formData.message} onChange={handleChange} required className="p-2 col-start-3 row-start-1 row-span-4 col-span-2 rounded bg-[var(--secondbg)] resize-none shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]"></textarea>
-        <button type="submit" disabled={loading} className="cursor-pointer col-start-1 amatic bg-[var(--action)] text-white text-2xl px-6 py-2 -mb-2 border-2 border-[var(--action)] hover:font-bold hover:bg-transparent hover:text-[var(--text)] transition-all duration-150">
-          {loading ? "Sender..." : "Send"}
-        </button>
-        {status && <p className="col-span-2 p-3">{status}</p>}
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6 gap-x-20 md:grid grid-cols-4">
+      <div className="flex flex-col p-2 col-start-1 col-span-2 row-start-1 rounded">
+        <label htmlFor="txtName">Navn *</label>
+        <input type="text" name="name" id="txtName" placeholder="Skriv dit navn..." value={formData.name} onChange={handleChange} required />
+      </div>
+      <div className="flex flex-col p-2 col-start-1 col-span-2 row-start-2 rounded">
+        <label htmlFor="txtEmail">Email *</label>
+        <input type="email" name="email" id="txtEmail" placeholder="Skriv din email..." value={formData.email} onChange={handleChange} required />
+      </div>
+      <div className="flex flex-col p-2 col-start-1 col-span-2 row-start-3 rounded">
+        <label htmlFor="txtPhone">Telefon *</label>
+        <input type="tel" name="phone" id="txtPhone" placeholder="Skriv dit telefonnummer.." value={formData.phone} onChange={handleChange} required />
+      </div>
+      <div className="flex flex-col p-2 col-start-1 col-span-2 row-start-4 rounded ">
+        <label htmlFor="txtPeople">Forventet antal gæster</label>
+        <input type="number" name="people" id="txtPeople" placeholder="0" value={formData.people} onChange={handleChange} />
+      </div>
+      <div className="flex flex-col p-2 col-start-1 col-span-2 row-start-5 rounded ">
+        <label htmlFor="txtDate">Dato for arrangement</label>
+        <input type="date" name="date" id="txtDate" value={formData.date} onChange={handleChange} />
+      </div>
+      <textarea name="message" placeholder="Yderlige kommentarer..." value={formData.message} onChange={handleChange} className="p-2 col-start-3 row-start-1 row-span-4 col-span-2 rounded bg-[var(--secondbg)] resize-none shadow-[-2px_21px_23px_12px_rgba(0,_0,_0,_0.1)]"></textarea>
+      <button type="submit" disabled={loading} className="cursor-pointer col-start-1 amatic bg-[var(--action)] text-[var(--text)] font-bold text-2xl px-6 py-2 border-2 border-[var(--action)] hover:font-bold hover:bg-transparent hover:text-[var(--text)] transition-all duration-150">
+        {loading ? "Sender..." : "Send"}
+      </button>
+      {status && <p className="col-span-2 p-3">{status}</p>}
+    </form>
   );
 };
 
